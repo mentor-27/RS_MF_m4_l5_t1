@@ -1,0 +1,32 @@
+.backButton {
+  position: absolute;
+  top: -1.25rem;
+  left: -1.25rem;
+  background-color: #2c797c;
+  border-top-left-radius: 2.5rem;
+  border-bottom-right-radius: 1.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .glyph {
+    transform: scale(1.25);
+  }
+
+  &:active {
+    background-color: hsl(182, 48%, 28%);
+  }
+}
+
+.glyph {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}

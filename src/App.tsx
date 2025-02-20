@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { NavLink, Route, Routes } from 'react-router-dom';
+
+import {
+  Episodes,
+  Characters,
+  Home,
+  Locations,
+  Character,
+  Location,
+  Episode,
+  NotFound,
+} from './pages';
+import { intrenalRoutes } from './routes.ts';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ul>
+        <li>
+          <NavLink to={intrenalRoutes.home}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to={intrenalRoutes.characters}>Characters</NavLink>
+        </li>
+        <li>
+          <NavLink to={intrenalRoutes.locations}>Locations</NavLink>
+        </li>
+        <li>
+          <NavLink to={intrenalRoutes.episodes}>Episodes</NavLink>
+        </li>
+      </ul>
+      <Routes>
+        <Route path={intrenalRoutes.home} element={<Home />} />
+        <Route path={intrenalRoutes.characters} element={<Characters />} />
+        <Route path={intrenalRoutes.character(':id')} element={<Character />} />
+        <Route path={intrenalRoutes.locations} element={<Locations />} />
+        <Route path={intrenalRoutes.location(':id')} element={<Location />} />
+        <Route path={intrenalRoutes.episodes} element={<Episodes />} />
+        <Route path={intrenalRoutes.episode(':id')} element={<Episode />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
