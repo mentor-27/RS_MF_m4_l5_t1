@@ -1,0 +1,52 @@
+.inputWrapperRoot {
+  line-height: 1.55;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputElem {
+  appearance: none;
+  resize: none;
+  display: block;
+  width: auto;
+  transition: border-color 0.1s ease;
+  text-align: left;
+  color: #c9c9c9;
+  border: 0.25rem solid #20a8ac;
+  background-color: #05757a;
+  height: 2.25rem;
+  min-height: 2.25rem;
+  line-height: 2.125rem;
+  font-size: 0.875rem;
+  padding-inline: 0.75rem;
+  padding-block: 0;
+  border-radius: 0.75rem;
+  outline: none;
+
+  &::placeholder {
+    color: #23bcc260;
+  }
+
+  &:focus {
+    border-color: #24bdc2;
+  }
+
+  &.error {
+    border-color: #e03131;
+  }
+}
+
+.inputSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2.128rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  inset-inline-end: 1px;
+  bottom: 1px;
+  top: 1px;
+  color: #828282;
+}

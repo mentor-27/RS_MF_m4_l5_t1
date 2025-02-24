@@ -6,3 +6,4 @@ export * from './Location/Location';
 export * from './Episodes/Episodes';
 export * from './Episode/Episode';
 export * from './NotFound/NotFound';
+export * from './Login/Login';

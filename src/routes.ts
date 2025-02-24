@@ -6,4 +6,5 @@ export const intrenalRoutes = {
   location: (alias: string) => `/locations/${alias}`,
   episodes: '/episodes',
   episode: (alias: string) => `/episodes/${alias}`,
+  login: '/login',
 };
