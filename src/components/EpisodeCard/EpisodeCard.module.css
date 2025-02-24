@@ -1,0 +1,39 @@
+.link:any-link {
+  align-content: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 0 1rem #0004;
+  overflow: hidden;
+  background-color: #2c797ccf;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:nth-child(1) {
+    border-top-left-radius: 2rem;
+  }
+
+  &:nth-child(2) {
+    border-top-right-radius: 2rem;
+  }
+
+  &:nth-last-child(1) {
+    border-bottom-right-radius: 2rem;
+  }
+
+  &:nth-last-child(2) {
+    border-bottom-left-radius: 2rem;
+  }
+}
+
+.episodeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  line-height: 1;
+}

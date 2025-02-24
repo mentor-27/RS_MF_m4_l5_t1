@@ -1,0 +1,25 @@
+.caption {
+  margin: 3rem 0 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: auto;
+  min-width: 20rem;
+  background-color: #046064;
+  border: 1.25rem solid #23bcc2cf;
+  border-radius: 3.75rem;
+  padding: 3rem;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  width: 100%;
+}
