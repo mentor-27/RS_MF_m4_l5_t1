@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router-dom';
 
-import { TEpisode } from '../../components/types';
+import { TEpisode } from '../../types';
 import { BackButton } from '../../components';
 
 import styles from './Episode.module.css';
 
-export const Episode = () => {
+const Episode = () => {
   const {
     state: { episode },
   }: { state: { episode: TEpisode } } = useLocation();
@@ -34,3 +34,5 @@ export const Episode = () => {
     </>
   );
 };
+
+export default Episode;

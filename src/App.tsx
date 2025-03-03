@@ -1,20 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 
+import {
+  Character,
+  Characters,
+  Episode,
+  Episodes,
+  Home,
+  Location,
+  Locations,
+  Login,
+  NotFound,
+} from './pages';
 import { AuthProvider } from './context';
 import { MainLayout } from './layout/MainLayout';
 import { intrenalRoutes } from './routes.ts';
-import {
-  Episodes,
-  Characters,
-  Home,
-  Locations,
-  Character,
-  Location,
-  Episode,
-  NotFound,
-  Login,
-} from './pages';
-import { PrivateRoute } from './components';
+import { PrivateRoute } from './hoc';
 
 import './App.css';
 
