@@ -1,0 +1,1 @@
+import{a as n,j as t}from"./index-1TEcqwu3.js";const o="_backButton_zpuph_1",c="_glyph_zpuph_35",s={backButton:o,glyph:c},p=()=>{const a=n();return t.jsx("button",{className:s.backButton,onClick:()=>a(-1),children:t.jsx("div",{className:s.glyph,children:"<"})})};export{p as B};
