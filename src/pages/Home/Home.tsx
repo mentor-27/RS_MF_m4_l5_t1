@@ -1,7 +1,7 @@
 import styles from './Home.module.css';
 import logo from '../../assets/logo.png';
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
       <h2>Welcome to Rick & Morty's universe! 🖐🏻</h2>
@@ -11,3 +11,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

@@ -1,14 +1,16 @@
 import { useLocation } from 'react-router-dom';
 
-import { TLocation } from '../../components/types';
+import { ILocation } from '../../types.ts';
 import { BackButton } from '../../components';
 
 import styles from './Location.module.css';
 
-export const Location = () => {
+const Location = () => {
   const {
     state: { location },
-  }: { state: { location: TLocation } } = useLocation();
+  }: { state: { location: ILocation } } = useLocation();
+
+  console.log(location);
 
   return (
     <>
@@ -27,3 +29,5 @@ export const Location = () => {
     </>
   );
 };
+
+export default Location;

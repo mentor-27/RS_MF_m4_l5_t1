@@ -1,4 +1,4 @@
-export const NotFound = () => {
+const NotFound = () => {
   return (
     <div
       style={{
@@ -24,3 +24,5 @@ export const NotFound = () => {
     </div>
   );
 };
+
+export default NotFound;

@@ -17,12 +17,14 @@ a {
   font-weight: 500;
   color: #23bcc2;
   text-decoration: inherit;
-}
-a:hover {
-  color: #2c797c;
-}
-.active {
-  color: hsl(182, 48%, 80%);
+
+  &:hover {
+    color: #2c797c;
+  }
+
+  &.active {
+    color: hsl(182, 48%, 80%);
+  }
 }
 
 body {
@@ -31,6 +33,7 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  margin: 0;
 }
 
 h1 {

@@ -1,1 +1,2 @@
-export * from './useSort.tsx';
+export * from './useSort';
+export * from './useQuery';

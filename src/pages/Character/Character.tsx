@@ -1,17 +1,17 @@
 import { useLocation } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
-import { TCharacter } from '../../components/types';
+import { ICharacter } from '../../types';
 import { BackButton } from '../../components';
 
 import styles from './Character.module.css';
 
 const cls = classNames.bind(styles);
 
-export const Character = () => {
+const Character = () => {
   const {
     state: { character },
-  }: { state: { character: TCharacter } } = useLocation();
+  }: { state: { character: ICharacter } } = useLocation();
 
   return (
     <>
@@ -57,3 +57,5 @@ export const Character = () => {
     </>
   );
 };
+
+export default Character;

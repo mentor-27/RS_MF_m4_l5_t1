@@ -39,7 +39,8 @@
 .characterInfoBlock {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: end;
+  gap: 0.5rem;
   width: 180px;
   margin-bottom: 4px;
 }
@@ -48,6 +49,8 @@
   display: inline-block;
   font-size: 1.125rem;
   text-align: left;
+  max-width: 65%;
+  word-wrap: break-word;
 }
 
 .speciesSign {
@@ -56,6 +59,8 @@
   background-color: #046064;
   border-radius: 0.75rem;
   font-size: 0.6875rem;
+  max-width: 35%;
+  word-wrap: break-word;
 }
 
 .statusSign {
