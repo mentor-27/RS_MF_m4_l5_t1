@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-import { TEpisode } from '../../types';
+import { IEpisode } from '../../types';
 import { BackButton } from '../../components';
 
 import styles from './Episode.module.css';
@@ -8,7 +8,7 @@ import styles from './Episode.module.css';
 const Episode = () => {
   const {
     state: { episode },
-  }: { state: { episode: TEpisode } } = useLocation();
+  }: { state: { episode: IEpisode } } = useLocation();
 
   return (
     <>
