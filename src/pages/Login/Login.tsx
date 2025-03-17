@@ -2,16 +2,17 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 import { JDButton, JDTextInput } from '../../components/UI';
 import { useAuth } from '../../context';
+import { intrenalRoutes } from '../../routes';
 
 import styles from './Login.module.css';
 
-export const Login = () => {
+const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const auth = useAuth();
 
   if (auth?.user) {
-    return <Navigate to={location.state?.from || '/'} />;
+    return <Navigate to={location.state?.from || intrenalRoutes.home} />;
   }
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -21,7 +22,7 @@ export const Login = () => {
     const name = formData.get('name') as string;
 
     auth?.signin(name, () =>
-      navigate(location.state?.from || '/', { replace: true })
+      navigate(location.state?.from || intrenalRoutes.home, { replace: true })
     );
   };
 
@@ -35,3 +36,5 @@ export const Login = () => {
     </>
   );
 };
+
+export default Login;

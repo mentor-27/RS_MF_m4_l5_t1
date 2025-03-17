@@ -1,11 +1,31 @@
+import { useCallback, useRef, useState } from 'react';
+
 import { EpisodeCard, SortButton } from '../../components';
-import { episodes } from '../../db/episode.ts';
-import { useSort } from '../../hooks/useSort.tsx';
+import { useSort, useQuery } from '../../hooks';
+import { IEpisode } from '../../types.ts';
 
 import styles from './Episodes.module.css';
 
-export const Episodes = () => {
-  const { dataArr, toggleSort } = useSort(episodes);
+const Episodes = () => {
+  const [pageNum, setPageNum] = useState(1);
+  const { loading, error, data, hasMore } = useQuery('/episode', pageNum);
+  const { dataArr, toggleSort } = useSort(data as IEpisode[]);
+
+  const observer = useRef<IntersectionObserver>(null);
+
+  const lastNodeRef = useCallback(
+    (node: HTMLDivElement) => {
+      if (loading) return;
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && hasMore) {
+          setPageNum(prev => prev + 1);
+        }
+      });
+      if (node) observer.current.observe(node);
+    },
+    [loading, hasMore]
+  );
 
   return (
     <>
@@ -13,11 +33,25 @@ export const Episodes = () => {
       <div className={styles.container}>
         <SortButton onClick={toggleSort} />
         <div className={styles.episodes}>
-          {dataArr.map(dataItem => (
-            <EpisodeCard key={dataItem.id} episode={dataItem} />
-          ))}
+          {dataArr.map((dataItem, index) => {
+            if (index === dataArr.length - 2) {
+              return (
+                <EpisodeCard
+                  ref={lastNodeRef}
+                  key={dataItem.id}
+                  episode={dataItem}
+                />
+              );
+            } else {
+              return <EpisodeCard key={dataItem.id} episode={dataItem} />;
+            }
+          })}
+          {loading && <div>Loading...</div>}
+          {error && <div>Something went wrong</div>}
         </div>
       </div>
     </>
   );
 };
+
+export default Episodes;
