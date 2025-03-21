@@ -6,6 +6,7 @@ const ASSETS = [
   '/index.html',
   '/src/index.css',
   '/src/App.css',
+  '/404',
 ].map(url => '/RS_MF_m4_l5_t1'.concat(url));
 
 self.addEventListener('install', async () => {
