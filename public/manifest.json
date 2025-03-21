@@ -1,12 +1,12 @@
 {
-  "id": "/index.html",
+  "id": "/RS_MF_m4_l5_t1/index.html",
   "name": "Rick and Morty Universe",
   "short_name": "R&M Uni",
-  "start_url": "/index.html",
+  "start_url": "/RS_MF_m4_l5_t1/index.html",
   "display": "standalone",
   "background_color": "#022f31",
   "theme_color": "#022f31",
-  "orientation": "landscape-primary",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "/RS_MF_m4_l5_t1/assets/icons/rick-48x48.png",

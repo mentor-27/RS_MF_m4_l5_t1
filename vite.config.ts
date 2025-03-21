@@ -20,7 +20,7 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        main: './index.html',
+        main: '/index.html',
       },
     },
   },
