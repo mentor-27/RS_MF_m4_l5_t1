@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import {
   Character,
@@ -10,10 +10,11 @@ import {
   Locations,
   Login,
   NotFound,
-} from './pages';
-import { AuthProvider } from './context';
+} from '@pages';
+('./pages/NotFound/NotFound');
+import { AuthProvider } from '@context';
 import { MainLayout } from './layout/MainLayout';
-import { intrenalRoutes } from './routes.ts';
+import { intrenalRoutes } from '@routes';
 import { PrivateRoute } from './hoc';
 
 import './App.css';
@@ -48,7 +49,8 @@ function App() {
             }
           />
           <Route path={intrenalRoutes.login} element={<Login />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path={intrenalRoutes.notFound} element={<NotFound />} />
+          <Route path="*" element={<Navigate to={intrenalRoutes.notFound} />} />
         </Route>
       </Routes>
     </AuthProvider>

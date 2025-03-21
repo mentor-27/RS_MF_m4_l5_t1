@@ -1,8 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { LocationCard, SortButton } from '../../components';
-import { useSort, useQuery } from '../../hooks';
-import { ILocation } from '../../types.ts';
+import { LocationCard, SortButton } from '@components';
+import { useSort, useQuery } from '@hooks';
+import { ILocation } from '@types';
 
 import styles from './Locations.module.css';
 

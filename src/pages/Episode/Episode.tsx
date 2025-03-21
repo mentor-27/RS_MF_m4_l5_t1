@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 
-import { IEpisode } from '../../types';
-import { BackButton } from '../../components';
+import { IEpisode } from '@types';
+import { BackButton } from '@components';
 
 import styles from './Episode.module.css';
 

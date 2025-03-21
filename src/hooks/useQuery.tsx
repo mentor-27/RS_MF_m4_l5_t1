@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import { TData } from '../types';
+import { TData } from '@types';
 
 axios.defaults.baseURL = 'https://rickandmortyapi.com/api';
 

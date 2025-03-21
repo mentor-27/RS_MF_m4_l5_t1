@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { TEpisodeCardProps } from '../../types.ts';
-import { intrenalRoutes } from '../../routes.ts';
+import { TEpisodeCardProps } from '@types';
+import { intrenalRoutes } from '@routes';
 
 import styles from './EpisodeCard.module.css';
 

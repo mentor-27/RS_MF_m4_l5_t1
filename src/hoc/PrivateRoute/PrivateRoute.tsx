@@ -1,7 +1,7 @@
 import { Navigate, useLocation } from 'react-router-dom';
 
-import { useAuth } from '../../context';
-import { intrenalRoutes } from '../../routes';
+import { useAuth } from '@context';
+import { intrenalRoutes } from '@routes';
 
 export const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const auth = useAuth();

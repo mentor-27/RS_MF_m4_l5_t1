@@ -1,8 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { EpisodeCard, SortButton } from '../../components';
-import { useSort, useQuery } from '../../hooks';
-import { IEpisode } from '../../types.ts';
+import { EpisodeCard, SortButton } from '@components';
+import { useSort, useQuery } from '@hooks';
+import { IEpisode } from '@types';
 
 import styles from './Episodes.module.css';
 

@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
-import { ICharacter } from '../../types';
-import { BackButton } from '../../components';
+import { ICharacter } from '@types';
+import { BackButton } from '@components';
 
 import styles from './Character.module.css';
 

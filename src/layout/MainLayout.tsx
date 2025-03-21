@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
-import { intrenalRoutes } from '../routes.ts';
-import { JDButton } from '../components/UI';
-import { useAuth } from '../context';
+import { intrenalRoutes } from '@routes';
+import { JDButton } from '@ui';
+import { useAuth } from '@context';
 import { ErrorBoundary } from '../hoc';
 
 export const MainLayout = () => {
