@@ -3,11 +3,13 @@ const dynamicCacheName = 'dynamic-v1';
 
 const ASSETS = [
   '/',
+  '/assets/logo.png',
   '/index.html',
   '/src/index.css',
   '/src/App.css',
   '/404',
-].map(url => '/RS_MF_m4_l5_t1'.concat(url));
+];
+// .map(url => '/RS_MF_m4_l5_t1'.concat(url));
 
 self.addEventListener('install', async () => {
   const cache = await caches.open(staticCacheName);
