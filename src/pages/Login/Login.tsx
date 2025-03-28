@@ -1,8 +1,8 @@
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 
-import { JDButton, JDTextInput } from '../../components/UI';
-import { useAuth } from '../../context';
-import { intrenalRoutes } from '../../routes';
+import { JDButton, JDTextInput } from '@ui';
+import { useAuth } from '@context';
+import { intrenalRoutes } from '@routes';
 
 import styles from './Login.module.css';
 

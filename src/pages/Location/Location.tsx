@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 
-import { ILocation } from '../../types.ts';
-import { BackButton } from '../../components';
+import { ILocation } from '@types';
+import { BackButton } from '@components';
 
 import styles from './Location.module.css';
 

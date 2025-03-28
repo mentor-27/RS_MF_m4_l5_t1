@@ -9,4 +9,5 @@ export const intrenalRoutes = {
   episodes: baseUrl + '/episodes',
   episode: (alias: string) => `${baseUrl}/episodes/${alias}`,
   login: baseUrl + '/login',
+  notFound: baseUrl + '/404',
 };

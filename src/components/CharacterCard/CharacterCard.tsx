@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { TCharacterCardProps } from '../../types';
-import { intrenalRoutes } from '../../routes.ts';
+import { TCharacterCardProps } from '@types';
+import { intrenalRoutes } from '@routes';
 
 import styles from './CharacterCard.module.css';
 

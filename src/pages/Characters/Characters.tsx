@@ -1,8 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { CharacterCard, SortButton } from '../../components';
-import { useQuery, useSort } from '../../hooks';
-import { ICharacter } from '../../types';
+import { CharacterCard, SortButton } from '@components';
+import { useQuery, useSort } from '@hooks';
+import { ICharacter } from '@types';
 
 import styles from './Characters.module.css';
 

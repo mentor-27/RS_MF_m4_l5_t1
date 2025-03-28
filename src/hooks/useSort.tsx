@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TData } from '../types';
+import { TData } from '@types';
 
 export const useSort = <T extends TData[] | null>(props: T) => {
   const [sort, setSort] = useState(false);

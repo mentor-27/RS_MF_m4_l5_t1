@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { TLocationCardProps } from '../../types';
-import { intrenalRoutes } from '../../routes';
+import { TLocationCardProps } from '@types';
+import { intrenalRoutes } from '@routes';
 
 import styles from './LocationCard.module.css';
 
